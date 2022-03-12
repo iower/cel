@@ -7,7 +7,7 @@ a = [...Array(s)].map(_ => Math.random() > .5)
 r = 110
 b = r.toString(2).padStart(8).split('').map(_ => +_)
 
-for (; s; s--) {
+for (;--s;) {
 	//a = a.map((_, i, a) => {
 		//a[i-1] a[i] a[i+1]
 	//})
