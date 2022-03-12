@@ -1,20 +1,22 @@
-<input type=range id=n min=0 max=255>
-<f id=f >
+<input type=range id=r min=0 max=255>
+<f id=f>
 <script>
 
 s = 50
 a = [...Array(s)].map(_ => Math.random() > .5)
+r = 110
+b = r.toString(2).padStart(8).split('').map(_ => +_)
 
 for (; s; s--) {
-	a = a.map((_, i, a) => {
+	//a = a.map((_, i, a) => {
 		//a[i-1] a[i] a[i+1]
-	})
-	f.innerHTML += `<br>` +
-	
-	.map(_ => _ ?  `░` : `▓`).join('')
+	//})
+	f.innerHTML += `<br>` + a.map(_ => _ ?  `░` : `▓`).join('')
 }
 
-n.onchange = _ => {
-console.log(n.value)
+r.onchange = _ => {
+console.log(r.value)
 }
+
+
 </script>
