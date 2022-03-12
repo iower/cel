@@ -1,0 +1,20 @@
+<input type=range id=n min=0 max=255>
+<f id=f >
+<script>
+
+s = 50
+a = [...Array(s)].map(_ => Math.random() > .5)
+
+for (; s; s--) {
+	a = a.map((_, i, a) => {
+		//a[i-1] a[i] a[i+1]
+	})
+	f.innerHTML += `<br>` +
+	
+	.map(_ => _ ?  `░` : `▓`).join('')
+}
+
+n.onchange = _ => {
+console.log(n.value)
+}
+</script>
